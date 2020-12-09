@@ -1,0 +1,48 @@
+#!venv/bin/python3
+
+from consolemenu import *
+from consolemenu.items import *
+
+# Main Menu
+menu = ConsoleMenu("Macroeconomics", "The Formula Guide")
+
+# GDP Submenu Items
+nominal_GDP = CommandItem("Nominal GDP", "python3 GDP/gdp.py")
+real_GDP = CommandItem("Real GDP", "python3 GDP/real_gdp.py")
+GDP_Deflator = CommandItem("GDP Deflator",  "python3 GDP/gdp_deflator.py")
+Growth_Rate = CommandItem("Growth Rate",  "python3 GDP/growth_rate.py")
+Mbasket = CommandItem("Market Basket",  "python3 GDP/mbasket.py")
+CPI = CommandItem("CPI (Consumer Price Index)",  "python3 GDP/CPI.py")
+
+# GDP Submenu
+GDP_menu = ConsoleMenu("GDP")
+# Append Items
+GDP_menu.append_item(nominal_GDP)
+GDP_menu.append_item(real_GDP)
+GDP_menu.append_item(GDP_Deflator)
+GDP_menu.append_item(Growth_Rate)
+GDP_menu.append_item(Mbasket)
+GDP_menu.append_item(CPI)
+# Convert Submenu
+GDPsubmenu = SubmenuItem("GDP", GDP_menu, menu)
+
+# Inflation Submenu Items 
+Inflation_Rate_gdp = CommandItem("Inflation Rate (GDP)", "python3 Inflation/inflation_rate.py")
+Inflation_Rate_cpi = CommandItem("Inflation Rate (CPI)", "python3 Inflation/infl_rate_CPI.py")
+Real_Interest_Rate = CommandItem("Real Interest Rate", "python3 Inflation/real_interest_rate.py")
+
+# Inflation Submenu
+InflationR_menu = ConsoleMenu("Inflation")
+# Append Items
+InflationR_menu.append_item(Inflation_Rate_gdp)
+InflationR_menu.append_item(Inflation_Rate_cpi)
+InflationR_menu.append_item(Real_Interest_Rate)
+# Convert Submenu
+InflationR_Submenu = SubmenuItem("Inflation", InflationR_menu, menu)
+
+# Add submenus to menu
+menu.append_item(GDPsubmenu)
+menu.append_item(InflationR_Submenu)
+
+# Display Menu
+menu.show()
