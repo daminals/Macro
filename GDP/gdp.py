@@ -1,5 +1,6 @@
 # gdp.py
 
+print("Remember, illegal activities, government transfer payments (social security, welfare,  etc.) sale of used goods, financial payments (bonds, stocks) are not counted in GDP")
 items_num = int(input("Number of Items: "))
 gdp_item_quantity = []
 gdp_item_price = []
