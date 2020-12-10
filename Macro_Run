@@ -6,6 +6,10 @@ from consolemenu.items import *
 # Main Menu
 menu = ConsoleMenu("Macroeconomics", "The Formula Guide")
 
+
+# GDP Submenu
+GDP_menu = ConsoleMenu("GDP")
+
 # GDP Submenu Items
 nominal_GDP = CommandItem("Nominal GDP", "python3 GDP/gdp.py")
 real_GDP = CommandItem("Real GDP", "python3 GDP/real_gdp.py")
@@ -15,8 +19,6 @@ Growth_Rate = CommandItem("Growth Rate",  "python3 GDP/growth_rate.py")
 Mbasket = CommandItem("Market Basket",  "python3 GDP/mbasket.py")
 CPI = CommandItem("CPI (Consumer Price Index)",  "python3 GDP/CPI.py")
 
-# GDP Submenu
-GDP_menu = ConsoleMenu("GDP")
 # Append Items
 GDP_menu.append_item(nominal_GDP)
 GDP_menu.append_item(real_GDP)
@@ -28,13 +30,14 @@ GDP_menu.append_item(CPI)
 # Convert Submenu
 GDPsubmenu = SubmenuItem("GDP", GDP_menu, menu)
 
+# Inflation Submenu
+InflationR_menu = ConsoleMenu("Inflation")
+
 # Inflation Submenu Items 
 Inflation_Rate_gdp = CommandItem("Inflation Rate (GDP)", "python3 Inflation/inflation_rate.py")
 Inflation_Rate_cpi = CommandItem("Inflation Rate (CPI)", "python3 Inflation/infl_rate_CPI.py")
 Real_Interest_Rate = CommandItem("Real Interest Rate", "python3 Inflation/real_interest_rate.py")
 
-# Inflation Submenu
-InflationR_menu = ConsoleMenu("Inflation")
 # Append Items
 InflationR_menu.append_item(Inflation_Rate_gdp)
 InflationR_menu.append_item(Inflation_Rate_cpi)
@@ -42,9 +45,25 @@ InflationR_menu.append_item(Real_Interest_Rate)
 # Convert Submenu
 InflationR_Submenu = SubmenuItem("Inflation", InflationR_menu, menu)
 
+# MPC Submenu
+MPC_menu = ConsoleMenu("MPC (Marginal Propensity to Consume)")
+
+# MPC Submenu Items
+MPC = CommandItem("Marginal Propensity to Consume (MPC)", "python3 MPC/marg_prop_consume.py")
+MPS = CommandItem("Marginal Propensity to Save", "python3 MPC/margin_prop_save.py")
+Con_mult = CommandItem("Consumption Multiplier", "python3 MPC/consumption_multiplier.py")
+
+# Append Items
+MPC_menu.append_item(MPC)
+MPC_menu.append_item(MPS)
+MPC_menu.append_item(Con_mult)
+# Convert Submenu
+MPC_Submenu = SubmenuItem("Marginal Propensity to Consume (MPC)", MPC_menu, menu)
+
 # Add submenus to menu
 menu.append_item(GDPsubmenu)
 menu.append_item(InflationR_Submenu)
+menu.append_item(MPC_Submenu)
 
 # Display Menu
 menu.show()
