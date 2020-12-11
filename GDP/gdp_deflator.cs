@@ -8,7 +8,9 @@ namespace gdp_deflator
   {
     static void Main(string[] args)
     {
+	  Console.ForegroundColor = ConsoleColor.Red;
       Console.WriteLine("GDP Deflator");
+	  Console.ResetColor();
 	  Console.WriteLine("-------------------");
 	  Console.Write("Enter Nominal GDP: ");
 	  double gdp_nom = Convert.ToDouble(Console.ReadLine());

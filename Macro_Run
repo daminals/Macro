@@ -34,7 +34,7 @@ GDPsubmenu = SubmenuItem("GDP", GDP_menu, menu)
 InflationR_menu = ConsoleMenu("Inflation")
 
 # Inflation Submenu Items 
-Inflation_Rate_gdp = CommandItem("Inflation Rate (GDP)", "python3 Inflation/inflation_rate.py")
+Inflation_Rate_gdp = CommandItem("Inflation Rate (GDP)", "mono Inflation/inflation_rate.exe")
 Inflation_Rate_cpi = CommandItem("Inflation Rate (CPI)", "python3 Inflation/infl_rate_CPI.py")
 Real_Interest_Rate = CommandItem("Real Interest Rate", "python3 Inflation/real_interest_rate.py")
 
