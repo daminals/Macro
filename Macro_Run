@@ -13,7 +13,7 @@ GDP_menu = ConsoleMenu("GDP")
 # GDP Submenu Items
 nominal_GDP = CommandItem("Nominal GDP", "python3 GDP/gdp.py")
 real_GDP = CommandItem("Real GDP", "python3 GDP/real_gdp.py")
-GDP_Deflator = CommandItem("GDP Deflator",  "python3 GDP/gdp_deflator.py")
+GDP_Deflator = CommandItem("GDP Deflator",  "mono  GDP/gdp_deflator.exe")
 GDP_per_capita = CommandItem("GDP Per Capita", "python3 GDP/gdp_per_capita.py")
 Growth_Rate = CommandItem("Growth Rate",  "python3 GDP/growth_rate.py")
 Mbasket = CommandItem("Market Basket",  "python3 GDP/mbasket.py")

@@ -1,3 +1,3 @@
 # Macro Formula Menu
 
-An organized menu of Macroeconomics formuals
+A CLI tool built to run a menu storing AP Macroeconomic Formulas
