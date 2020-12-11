@@ -49,7 +49,7 @@ InflationR_Submenu = SubmenuItem("Inflation", InflationR_menu, menu)
 MPC_menu = ConsoleMenu("MPC (Marginal Propensity to Consume)")
 
 # MPC Submenu Items
-MPC = CommandItem("Marginal Propensity to Consume (MPC)", "python3 MPC/marg_prop_consume.py")
+MPC = CommandItem("Marginal Propensity to Consume (MPC)", "mono MPC/mpc.exe")
 MPS = CommandItem("Marginal Propensity to Save", "python3 MPC/margin_prop_save.py")
 Con_mult = CommandItem("Consumption Multiplier", "mono MPC/consumption_multiplier.exe")
 
