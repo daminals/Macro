@@ -22,7 +22,7 @@ namespace inflation_rate
 	  deflator *= 100;
 	  
 	  Console.WriteLine("-------------------");
-	  Console.Write("GDP Deflator: ");
+	  Console.Write("Inflation Rate: ");
 	  Console.ForegroundColor = ConsoleColor.Green;
 	  Console.Write(deflator);
 	  string clear = Console.ReadLine();
