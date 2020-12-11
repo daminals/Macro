@@ -12,7 +12,7 @@ namespace real_interest_rate
       Console.WriteLine("Inflation Rate (CPI)");
 	  Console.ResetColor();
 	  Console.WriteLine("-------------------");
-	  Console.Write("Nominal Interest Rate : ");
+	  Console.Write("Nominal Interest Rate: ");
 	  double int_rate = Convert.ToDouble(Console.ReadLine());
 	  Console.Write("Inflation Rate: ");
 	  double infl_rate = Convert.ToDouble(Console.ReadLine());
