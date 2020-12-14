@@ -51,12 +51,14 @@ MPC_menu = ConsoleMenu("MPC (Marginal Propensity to Consume)")
 # MPC Submenu Items
 MPC = CommandItem("Marginal Propensity to Consume (MPC)", "mono MPC/mpc.exe")
 MPS = CommandItem("Marginal Propensity to Save", "mono MPC/mps.exe")
-Con_mult = CommandItem("Consumption Multiplier", "mono MPC/consumption_multiplier.exe")
+Con_mult = CommandItem("Consumption Multiplier (MPC)", "mono MPC/consumption_multiplier.exe")
+spend_mult = CommandItem("Consumption Multiplier (MPS)", "mono MPC/spend_mult.exe")
 
 # Append Items
 MPC_menu.append_item(MPC)
 MPC_menu.append_item(MPS)
 MPC_menu.append_item(Con_mult)
+MPC_menu.append_item(spend_mult)
 # Convert Submenu
 MPC_Submenu = SubmenuItem("Marginal Propensity to Consume (MPC)", MPC_menu, menu)
 
