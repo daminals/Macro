@@ -12,7 +12,7 @@ namespace CPI
       Console.WriteLine("Consumer Price Index (CPI)");
 	  Console.ResetColor();
 	  Console.WriteLine("-------------------");
-	  Console.Write("Consumer Market Basket : ");
+	  Console.Write("Consumer Market Basket: ");
 	  double mbasket1 = Convert.ToDouble(Console.ReadLine());
 	  Console.Write("Base Market Basket: ");
 	  double mbasket2 = Convert.ToDouble(Console.ReadLine());
