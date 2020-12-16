@@ -18,6 +18,7 @@ GDP_per_capita = CommandItem("GDP Per Capita", "python3 GDP/gdp_per_capita.py")
 Growth_Rate = CommandItem("Growth Rate",  "python3 GDP/growth_rate.py")
 Mbasket = CommandItem("Market Basket",  "python3 GDP/mbasket.py")
 CPI = CommandItem("CPI (Consumer Price Index)",  "mono GDP/CPI.exe")
+result_gdp = CommandItem("Resulting GDP",  "mono GDP/result_gdp.exe")
 
 # Append Items
 GDP_menu.append_item(nominal_GDP)
@@ -27,6 +28,8 @@ GDP_menu.append_item(GDP_per_capita)
 GDP_menu.append_item(Growth_Rate)
 GDP_menu.append_item(Mbasket)
 GDP_menu.append_item(CPI)
+GDP_menu.append_item(result_gdp)
+
 # Convert Submenu
 GDPsubmenu = SubmenuItem("GDP", GDP_menu, menu)
 
@@ -50,7 +53,7 @@ MPC_menu = ConsoleMenu("MPC (Marginal Propensity to Consume)")
 
 # MPC Submenu Items
 MPC = CommandItem("Marginal Propensity to Consume (MPC)", "mono MPC/mpc.exe")
-MPS = CommandItem("Marginal Propensity to Save", "mono MPC/mps.exe")
+MPS = CommandItem("Marginal Propensity to Save (MPS)", "mono MPC/mps.exe")
 Con_mult = CommandItem("Consumption Multiplier (MPC)", "mono MPC/consumption_multiplier.exe")
 spend_mult = CommandItem("Consumption Multiplier (MPS)", "mono MPC/spend_mult.exe")
 
